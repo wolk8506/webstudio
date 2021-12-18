@@ -1,0 +1,96 @@
+/* Наша команда */
+.section-command {
+  background-color: var(--background-color-man-section);
+  @media screen and (max-width: 479px) {
+    min-width: 480px;
+  }
+}
+.mans {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  & > li + li {
+    @media screen and (min-width: 1200px) {
+      margin-left: 30px;
+    }
+  }
+  &__img {
+    display: block;
+    @media screen and (min-width: 768px) {
+      width: 354px;
+      height: 374px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+      height: 260px;
+    }
+    width: 450px;
+    height: 460px;
+  }
+  &__item {
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 354px;
+      margin: 15px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+      margin: 0;
+    }
+    width: 450px;
+
+    background-color: var(--background-color);
+    box-shadow: 0px 1px 3px $color-box-shadow-12,
+      0px 1px 1px $color-box-shadow-14, 0px 2px 1px $color-box-shadow-2;
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.man-card {
+  padding: 30px 122px;
+  @media screen and (min-width: 768px) {
+    padding: 30px 74px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 30px 32px;
+  }
+  &__name {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    color: var(--title--color);
+  }
+  &__profession {
+    margin-bottom: 16px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link {
+    fill: var(--icon-color);
+  }
+  &__link:hover,
+  &__link:focus {
+    fill: var(--background-color);
+    background-color: var(--accent-color);
+  }
+}

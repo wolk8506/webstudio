@@ -1,0 +1,55 @@
+.specialty {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+  &__thumb {
+    padding: 25px 190px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: var(--background-color-man-section);
+    @media screen and (min-width: 768px) {
+      padding: 25px 142px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 25px 100px;
+    }
+  }
+  &__icon {
+    display: block;
+  }
+  &__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__item {
+    width: 450px;
+    @media screen and (min-width: 768px) {
+      margin: 15px;
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+      margin: 0 30px 0 0;
+    }
+  }
+  &__item:last-child {
+    @media screen and (min-width: 1200px) {
+      margin-right: 0px;
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--title--color);
+  }
+}

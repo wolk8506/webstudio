@@ -1,0 +1,195 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-modal);
+  @include animation(opacity visibility);
+  overflow-y: scroll;
+}
+.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 0;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 450px;
+  height: 609px;
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+  padding: 40px;
+  background-color: var(--background-color);
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  @include animation(opacity transform);
+
+  &__btn-close {
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 6px;
+
+    border: 1px solid var(--modal-btn-color);
+    border-radius: 50%;
+    background-color: var(--background-color);
+    cursor: pointer;
+    @include animation(fill background-color);
+  }
+  &__icon {
+    display: block;
+  }
+  &__btn-close:hover,
+  &__btn-close:focus {
+    fill: var(--accent-color);
+  }
+  &__title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--title--color);
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.contacts {
+  &__label {
+    position: relative;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  }
+  &__label:focus-within,
+  &__input:focus-within + &__icon,
+  &__textarea:focus-within {
+    border-color: var(--accent-color);
+    fill: var(--accent-color);
+  }
+  &__checkbox:focus-within + &__checkbox-ico,
+  &__checkbox:hover + &__checkbox-ico {
+    border-color: var(--accent-color);
+    cursor: pointer;
+  }
+  &__input:hover,
+  &__input:hover + &__icon,
+  &__textarea:hover {
+    border-color: var(--accent-color);
+    cursor: pointer;
+    fill: var(--accent-color);
+  }
+  &__input,
+  &__textarea {
+    display: block;
+    width: 370px;
+    @media screen and (min-width: 1200px) {
+      width: 448px;
+    }
+    border: 1px solid var(--border-color-form);
+    border-radius: 4px;
+    @include animation(border-color);
+  }
+  &__input {
+    padding-left: 42px;
+    height: 40px;
+  }
+  &__textarea {
+    font-family: $font-text;
+    font-size: 12px;
+    line-height: 1.17;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    height: 120px;
+    letter-spacing: 0.01em;
+    resize: none;
+  }
+  &__text {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
+    font-size: 12px;
+
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
+  &__text-link {
+    margin-left: 3px;
+    color: var(--accent-color);
+  }
+  &__btn {
+    display: block;
+    font-family: $font-text;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: var(--background-color);
+
+    padding: 10px 55px 10px 56px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px $color-box-shadow-15;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    @include animation(background-color);
+  }
+  &__btn:hover,
+  &__btn:focus {
+    background-color: var(--button-hiro-hover);
+  }
+  &__icon {
+    display: block;
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+    @include animation(fill);
+  }
+
+  &__checkbox-ico {
+    display: block;
+    @media screen and (min-width: 1200px) {
+      margin-right: 7px;
+      margin-left: 13px;
+    }
+    margin-right: 8px;
+    margin-left: 0px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--logo-top-color);
+    border-radius: 2px;
+    cursor: pointer;
+    @include animation(background-color border-color);
+  }
+
+  &__checkbox:checked + &__checkbox-ico {
+    border-color: var(--accent-color);
+    border-radius: 2px;
+    background-image: url("../images/icon-check.svg");
+    background-size: contain;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-color: var(--accent-color);
+  }
+  &__form {
+    position: relative;
+    margin-bottom: 10px;
+  }
+}

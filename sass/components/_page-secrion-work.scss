@@ -1,0 +1,38 @@
+/* Чем мы занимаемся */
+.work {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+  padding-top: 0;
+  &__list {
+    display: flex;
+  }
+}
+.work-box {
+  &__img {
+    display: block;
+  }
+  & li + li {
+    margin-left: 30px;
+  }
+  &__item {
+    position: relative;
+  }
+  &__blok {
+    display: block;
+    position: absolute;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--background-box);
+  }
+  &__text {
+    font-weight: 700;
+    line-height: 1.15;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--background-color);
+  }
+}
