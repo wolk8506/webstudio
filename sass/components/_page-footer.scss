@@ -1,19 +1,24 @@
+@use "../utils/variables";
+
 footer {
   background-color: var(--background-color-section);
   padding-top: 60px;
   padding-bottom: 60px;
+
   @media screen and (max-width: 479px) {
     min-width: 480px;
     padding-left: auto;
     padding-right: auto;
   }
 }
+
 .section-footer {
   @media screen and (min-width: 1200px) {
     display: flex;
     align-items: baseline;
   }
 }
+
 address {
   margin-bottom: 9px;
 
@@ -28,20 +33,19 @@ address {
   @media screen and (max-width: 1199px) {
     margin-bottom: 60px;
   }
+
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-around;
     align-items: baseline;
   }
+
   @media screen and (min-width: 1200px) {
     align-items: baseline;
   }
 }
+
 .footer-title {
-  @media screen and (min-width: 1200px) {
-    text-align: start;
-    justify-content: start;
-  }
   text-align: center;
   display: block;
   margin-bottom: 20px;
@@ -49,89 +53,113 @@ address {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--background-color);
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+    justify-content: start;
+  }
+
 }
+
 .blok-adress {
   text-align: center;
+  margin-bottom: 60px;
+  margin-right: 0;
+
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
   }
+
   @media screen and (min-width: 1200px) {
     margin-right: 165px;
     margin-bottom: 60px;
     justify-content: flex-start;
     text-align: start;
   }
+
   @media screen and (min-width: 1200px) {
     margin-right: 70px;
     margin-bottom: 0;
     justify-content: flex-start;
     text-align: start;
   }
-  margin-bottom: 60px;
-  margin-right: 0;
+
+
+
   &__logo {
     display: inline-block;
     margin-bottom: 20px;
   }
+
   &__text {
     color: var(--background-color);
   }
-  &__contact > li + li {
+
+  &__contact>li+li {
     margin-top: 9px;
   }
+
   &__contact {
     line-height: 1.71;
     color: var(--contact-botom-color);
-    @include animation(color);
+    @include variables.animation(color);
   }
+
   &__contact:hover,
   &__contact:focus {
     color: var(--accent-color);
   }
 }
+
 .blok-join {
-  @media screen and (min-width: 768px) {
-  }
+  padding-top: 0;
+
+  @media screen and (min-width: 768px) {}
+
   @media screen and (min-width: 1200px) {
     margin-right: 93px;
   }
-  padding-top: 0;
+
+
 
   &__link {
     fill: var(--background-color);
     background-color: var(--icon-color-footer);
   }
+
   &__link:hover,
   &__link:focus {
     background-color: var(--accent-color);
   }
+
   &__list {
     display: flex;
     justify-content: center;
+
     @media screen and (min-width: 1200px) {
       justify-content: start;
     }
   }
-  &__list > li + li {
+
+  &__list>li+li {
     margin-left: 10px;
   }
 }
+
 /*  */
 .blok-subscribe {
   &__field {
-    @media screen and (min-width: 1200px) {
-      display: flex;
-      text-align: start;
-    }
     text-align: center;
-  }
-  &__mail {
+
     @media screen and (min-width: 1200px) {
       display: flex;
       text-align: start;
-      margin-bottom: 0;
-      margin-right: 12px;
     }
+
+
+  }
+
+  &__mail {
     margin-bottom: 20px;
     width: 358px;
     height: 50px;
@@ -141,22 +169,29 @@ address {
     line-height: 1.25;
     color: var(--contact-botom-color);
 
-    border: 1px solid $color-border-3;
-    filter: drop-shadow(0px 4px 4px $color-box-shadow-15);
+    border: 1px solid variables.$color-border-3;
+    filter: drop-shadow(0px 4px 4px variables.$color-box-shadow-15);
     border-radius: 4px;
     background-color: transparent;
-  }
-  &__btn {
+
     @media screen and (min-width: 1200px) {
-      margin-left: 0;
-      margin-right: 0;
+      display: flex;
+      text-align: start;
+      margin-bottom: 0;
+      margin-right: 12px;
     }
+
+
+  }
+
+  &__btn {
     margin-left: auto;
     margin-right: auto;
     display: flex;
     align-items: center;
     padding: 10px 28px 10px 29px;
-    font-family: Roboto, sans-serif;
+    font-family: Roboto,
+      sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
@@ -165,16 +200,25 @@ address {
 
     color: var(--background-color);
     background: var(--accent-color);
-    box-shadow: 0px 4px 4px $color-box-shadow-15;
+    box-shadow: 0px 4px 4px variables.$color-box-shadow-15;
     border-radius: 4px;
     border: none;
     cursor: pointer;
-    @include animation(background-color);
+    @include variables.animation(background-color);
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+
   }
+
   &__btn:hover,
   &__btn:focus {
     background: var(--button-hiro-hover);
   }
+
   &__ico {
     margin-left: 10px;
   }

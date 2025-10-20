@@ -367,12 +367,10 @@ body.modal-open {
   display: block;
   padding: 12px;
   border-radius: 50%;
-  -webkit-transition-property: background-color fill;
-  transition-property: background-color fill;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link-social {
+  -webkit-transition: background-color fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-social {
@@ -415,12 +413,6 @@ header {
 @media screen and (max-width: 767px) {
   .mobile-menu {
     visibility: hidden;
-    -webkit-transition-property: opacity transform;
-    transition-property: opacity transform;
-    -webkit-transition-duration: 250ms;
-            transition-duration: 250ms;
-    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     position: fixed;
     padding: 40px 48px;
     top: 0;
@@ -440,6 +432,10 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .mobile-menu {
+    -webkit-transition: opacity transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 @media screen and (min-width: 768px) {
@@ -467,12 +463,10 @@ header {
   margin: 0;
   border: none;
   cursor: pointer;
-  -webkit-transition-property: fill;
-  transition-property: fill;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation__btn {
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .navigation__btn {
@@ -722,12 +716,11 @@ header {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  -webkit-transition-property: color fill;
-  transition-property: color fill;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation__page,
+.contacts__link {
+  -webkit-transition: color fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation__page:hover,
@@ -844,12 +837,10 @@ header {
   background-color: var(--accent-color);
   border: none;
   border-radius: 4px;
-  -webkit-transition-property: background-color;
-  transition-property: background-color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero__btn {
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero__btn:hover, .hero__btn:focus {
   background-color: var(--button-hiro-hover);
@@ -1122,12 +1113,6 @@ header {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   fill: var(--icon-color);
-  -webkit-transition-property: border-color fill;
-  transition-property: border-color fill;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .client__link {
@@ -1138,6 +1123,10 @@ header {
   .client__link {
     padding: 15px 31px;
   }
+}
+.client__link {
+  -webkit-transition: border-color fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client__link:hover, .client__link:focus {
   fill: var(--accent-color);
@@ -1215,12 +1204,10 @@ header {
   background-color: var(--background-color-man-section);
   border-radius: 4px;
   border: none;
-  -webkit-transition-property: background-color color box-shadow;
-  transition-property: background-color color box-shadow;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.filter__btn {
+  -webkit-transition: background-color color box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color color box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter__btn:hover, .filter__btn:focus {
   color: var(--background-color);
@@ -1304,14 +1291,12 @@ header {
 }
 .projects__link {
   display: block;
-  -webkit-transition-property: -webkit-box-shadow;
-  transition-property: -webkit-box-shadow;
-  transition-property: box-shadow;
-  transition-property: box-shadow, -webkit-box-shadow;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.projects__link {
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects__element:hover, .projects__element:focus {
   display: inline-block;
@@ -1351,14 +1336,12 @@ header {
   background-color: var(--background-color-project);
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.overlay {
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .overlay__text {
   font-size: 18px;
@@ -1484,12 +1467,10 @@ address {
 .blok-adress__contact {
   line-height: 1.71;
   color: var(--contact-botom-color);
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.blok-adress__contact {
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .blok-adress__contact:hover, .blok-adress__contact:focus {
   color: var(--accent-color);
@@ -1587,12 +1568,10 @@ address {
   border-radius: 4px;
   border: none;
   cursor: pointer;
-  -webkit-transition-property: background-color;
-  transition-property: background-color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.blok-subscribe__btn {
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 1200px) {
   .blok-subscribe__btn {
@@ -1614,13 +1593,11 @@ address {
   width: 100%;
   height: 100%;
   background-color: var(--background-modal);
-  -webkit-transition-property: opacity visibility;
-  transition-property: opacity visibility;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
+}
+.backdrop {
+  -webkit-transition: opacity visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden .modal {
@@ -1640,12 +1617,10 @@ address {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   opacity: 1;
-  -webkit-transition-property: opacity transform;
-  transition-property: opacity transform;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+  -webkit-transition: opacity transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -1663,12 +1638,10 @@ address {
   border-radius: 50%;
   background-color: var(--background-color);
   cursor: pointer;
-  -webkit-transition-property: fill background-color;
-  transition-property: fill background-color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__btn-close {
+  -webkit-transition: fill background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal__icon {
   display: block;
@@ -1717,12 +1690,10 @@ address {
   width: 370px;
   border: 1px solid var(--border-color-form);
   border-radius: 4px;
-  -webkit-transition-property: border-color;
-  transition-property: border-color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts__input, .contacts__textarea {
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 1200px) {
   .contacts__input, .contacts__textarea {
@@ -1782,12 +1753,10 @@ address {
   border-radius: 4px;
   border: none;
   cursor: pointer;
-  -webkit-transition-property: background-color;
-  transition-property: background-color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts__btn {
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts__btn:hover, .contacts__btn:focus {
   background-color: var(--button-hiro-hover);
@@ -1797,12 +1766,10 @@ address {
   position: absolute;
   bottom: 11px;
   left: 12px;
-  -webkit-transition-property: fill;
-  transition-property: fill;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts__icon {
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts__checkbox-ico {
   display: block;
@@ -1813,12 +1780,10 @@ address {
   border: 2px solid var(--logo-top-color);
   border-radius: 2px;
   cursor: pointer;
-  -webkit-transition-property: background-color border-color;
-  transition-property: background-color border-color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts__checkbox-ico {
+  -webkit-transition: background-color border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 1200px) {
   .contacts__checkbox-ico {

@@ -1,12 +1,16 @@
+@use "../utils/variables";
+
 .filter {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 40px;
 
   .active {
     color: var(--background-color);
     background-color: var(--accent-color);
-    box-shadow: 0px 3px 1px $color-box-shadow-1,
-      0px 1px 2px $color-box-shadow-08, 0px 2px 2px $color-box-shadow-12;
+    box-shadow: 0px 3px 1px variables.$color-box-shadow-1,
+      0px 1px 2px variables.$color-box-shadow-08, 0px 2px 2px variables.$color-box-shadow-12;
   }
 
   @media screen and (max-width: 767px) {
@@ -37,7 +41,7 @@
     }
   }
 
-  justify-content: flex-start;
+
 
   @media screen and (min-width: 768px) {
     margin-bottom: 30px;
@@ -47,7 +51,7 @@
     margin-bottom: 50px;
   }
 
-  margin-bottom: 40px;
+
 
   &__btn {
     padding: 6px 22px;
@@ -59,14 +63,14 @@
     background-color: var(--background-color-man-section);
     border-radius: 4px;
     border: none;
-    @include animation(background-color color box-shadow);
+    @include variables.animation(background-color color box-shadow);
   }
 
   &__btn:hover,
   &__btn:focus {
     color: var(--background-color);
     background-color: var(--accent-color);
-    box-shadow: 0px 3px 1px $color-box-shadow-1,
-      0px 1px 2px $color-box-shadow-08, 0px 2px 2px $color-box-shadow-12;
+    box-shadow: 0px 3px 1px variables.$color-box-shadow-1,
+      0px 1px 2px variables.$color-box-shadow-08, 0px 2px 2px variables.$color-box-shadow-12;
   }
 }
