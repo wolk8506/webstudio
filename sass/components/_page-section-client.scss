@@ -1,19 +1,28 @@
+@use "../utils/variables";
+
 /* Постоянные клиенты */
 .client {
   display: flex;
   flex-wrap: wrap;
+
   @media screen and (max-width: 1199px) {
     margin: -15px;
   }
+
   @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
-    & > li + li {
+
+    &>li+li {
       margin-left: 30px;
     }
   }
+
   &__link {
     display: block;
     padding: 15px 51px;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    fill: var(--icon-color);
 
     @media screen and (min-width: 768px) {
       padding: 15px 59px;
@@ -23,19 +32,19 @@
       padding: 15px 31px;
     }
 
-    border: 1px solid var(--icon-color);
-    border-radius: 4px;
-    fill: var(--icon-color);
-    @include animation(border-color fill);
+    @include variables.animation(border-color fill);
   }
+
   &__link:hover,
   &__link:focus {
     fill: var(--accent-color);
     border-color: var(--accent-color);
   }
+
   &__icon {
     display: block;
   }
+
   &__item {
     @media screen and (max-width: 1199px) {
       margin: 15px;

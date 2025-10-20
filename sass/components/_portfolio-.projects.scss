@@ -1,3 +1,5 @@
+@use "../utils/variables";
+
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -42,6 +44,10 @@
 
   &__element {
     width: 450px;
+    display: block;
+    border: 1px solid var(--border-color);
+    border-top: none;
+    cursor: pointer;
 
     @media screen and (min-width: 768px) {
       width: 354px;
@@ -50,11 +56,6 @@
     @media screen and (min-width: 1200px) {
       width: 370px;
     }
-
-    display: block;
-    border: 1px solid var(--border-color);
-    border-top: none;
-    cursor: pointer;
   }
 
   &__link:hover .overlay {
@@ -79,14 +80,14 @@
 
   &__link {
     display: block;
-    @include animation(box-shadow);
+    @include variables.animation(box-shadow);
   }
 
   &__element:hover,
   &__element:focus {
     display: inline-block;
-    box-shadow: 0px 1px 1px $color-box-shadow-12,
-      0px 4px 4px $color-box-shadow-06, 1px 4px 6px $color-box-shadow-16;
+    box-shadow: 0px 1px 1px variables.$color-box-shadow-12,
+      0px 4px 4px variables.$color-box-shadow-06, 1px 4px 6px variables.$color-box-shadow-16;
   }
 }
 
@@ -120,7 +121,7 @@
   padding: 63px 24px;
   background-color: var(--background-color-project);
   transform: translateY(100%);
-  @include animation(transform);
+  @include variables.animation(transform);
 
   &__text {
     font-size: 18px;

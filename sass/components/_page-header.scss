@@ -1,3 +1,5 @@
+@use "../utils/variables";
+
 header {
   border-bottom: 1px solid var(--line-color);
   position: relative;
@@ -21,9 +23,11 @@ header {
 }
 
 .mobile-menu {
+  background-color: var(--background-color);
+
   @media screen and (max-width: 767px) {
     visibility: hidden;
-    @include animation(opacity transform);
+
     position: fixed;
     padding: 40px 48px;
     top: 0;
@@ -37,14 +41,14 @@ header {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+
+    @include variables.animation(opacity transform);
   }
 
   @media screen and (min-width: 768px) {
     position: static;
     display: flex;
   }
-
-  background-color: var(--background-color);
 }
 
 .mobile-menu.is-open {
@@ -53,10 +57,6 @@ header {
 }
 
 .navigation__btn {
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-
   position: absolute;
   display: block;
   top: 10px;
@@ -66,7 +66,11 @@ header {
   margin: 0;
   border: none;
   cursor: pointer;
-  @include animation(fill);
+  @include variables.animation(fill);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .navigation__btn:hover,
@@ -75,15 +79,15 @@ header {
 }
 
 .social-menu {
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-
   display: flex;
   color: var(--accent-color);
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 
   &__divide {
     color: var(--border-color-form);
@@ -147,12 +151,12 @@ header {
   }
 
   &__page {
+    color: var(--title--color);
+
     @media screen and (max-width: 767px) {
       font-size: 40px;
       line-height: 1.18;
     }
-
-    color: var(--title--color);
   }
 
   &__page--active {
@@ -180,21 +184,24 @@ header {
 }
 
 .logo {
-  font-family: $font-logo;
+  font-family: variables.$font-logo;
   font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  color: var(--accent-color);
 
   @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: 1.19;
   }
-
-  font-size: 24px;
-  line-height: 1.17;
-  color: var(--accent-color);
 }
 
 .contacts {
+
   &__link {
+    color: var(--text--color);
+    fill: currentColor;
+
     @media screen and (min-width: 768px) {
       display: flex;
       font-size: 12px;
@@ -203,9 +210,6 @@ header {
     @media screen and (min-width: 1200px) {
       font-size: 14px;
     }
-
-    color: var(--text--color);
-    fill: currentColor;
   }
 
   @media screen and (max-width: 767px) {
@@ -297,7 +301,7 @@ header {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  @include animation(color fill);
+  @include variables.animation(color fill);
 }
 
 .navigation__page:hover,

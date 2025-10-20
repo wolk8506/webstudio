@@ -1,3 +1,5 @@
+@use "../utils/variables";
+
 h1,
 h2,
 h3,
@@ -6,41 +8,53 @@ p {
   margin: 0;
   padding: 0;
 }
+
 body {
   margin: 0 auto;
-  font-family: $font-text;
+  font-family: variables.$font-text;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--text--color);
   background-color: var(--background-color);
 }
+
 body.modal-open {
   overflow: hidden;
 }
+
 .container {
-  @media screen and (max-width: 767px) {
-    width: 480px;
-  }
-  @media screen and (min-width: 768px) {
-    width: 768px;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-  }
   width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 767px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+
 }
+
 .section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
-  padding-top: 60px;
-  padding-bottom: 60px;
+
+
+
   &__title {
     margin-bottom: 50px;
     font-weight: 700;
@@ -48,22 +62,27 @@ body.modal-open {
     line-height: 1.17;
     text-align: center;
     color: var(--title--color);
+
     @media screen and (min-width: 1200px) {
       font-size: 36px;
     }
   }
 }
+
 .link {
   text-decoration: none;
 }
+
 .list {
   list-style: none;
 }
+
 .btn {
-  font-family: $font-text;
+  font-family: variables.$font-text;
   font-size: 16px;
   cursor: pointer;
 }
+
 /* Визуальное скрытие заголовка */
 .visually-hidden {
   position: absolute;
@@ -78,13 +97,15 @@ body.modal-open {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 /* Иконки соцсетей */
 .link-social {
   display: block;
   padding: 12px;
   border-radius: 50%;
-  @include animation(background-color fill);
+  @include variables.animation(background-color fill);
 }
+
 .icon-social {
   display: block;
 }
