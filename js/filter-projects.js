@@ -1,116 +1,7 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Development of mobile, desktop applications and design." />
-    <title>Портфолио</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="shurtcut icon" href="./images/ws.svg" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/main.min.css" />
-  </head>
-  <body>
-    <header>
-      <div class="container header">
-        <nav class="navigation">
-          <a class="link logo navigation__logo" href="./"
-            >Web<span class="navigation__title navigation__title--color">Studio</span></a
-          >
-          <button class="navigation__btn js-open-menu" type="button">
-            <svg width="40" height="40">
-              <use class="navigation__icon-menu" href="./images/icons.svg#m-menu"></use>
-            </svg>
-          </button>
-          <div class="mobile-menu js-menu-container">
-            <button class="navigation__btn js-close-menu" type="button">
-              <svg width="40" height="40">
-                <use class="navigation__icon-close" href="./images/icons.svg#m-close"></use>
-              </svg>
-            </button>
-            <ul class="list navigation__pages">
-              <li>
-                <a class="link navigation__page" href="./">Студия</a>
-              </li>
-              <li>
-                <a class="link navigation__page navigation__page--active" href="./portfolio.html"
-                  >Портфолио</a
-                >
-              </li>
-              <li><a class="link navigation__page" href="./contact.html">Контакты</a></li>
-            </ul>
-
-            <ul class="list contacts">
-              <li>
-                <a class="link contacts__link" href="mailto:info@devstudio.com">
-                  <svg class="contacts__ico-envelope" width="16" height="12">
-                    <use href="./images/icons.svg#envelope"></use>
-                  </svg>
-                  info@devstudio.com</a
-                >
-              </li>
-              <li>
-                <a class="link contacts__link contacts__link--format" href="tel:+380961111111"
-                  ><svg class="contacts__ico-smartphone" width="10" height="16">
-                    <use href="./images/icons.svg#smartphone"></use></svg
-                  >+38 096 111 11 11</a
-                >
-              </li>
-            </ul>
-            <ul class="list social-menu">
-              <li>
-                <a class="link social-menu__link" href=""></a>Instagram<span
-                  class="social-menu__divide"
-                >
-                  |
-                </span>
-              </li>
-              <li>
-                <a class="link social-menu__link" href=""></a>Twitter<span
-                  class="social-menu__divide"
-                >
-                  |
-                </span>
-              </li>
-              <li>
-                <a class="link social-menu__link" href=""></a>Facebook<span
-                  class="social-menu__divide"
-                  >|</span
-                >
-              </li>
-              <li><a class="link social-menu__link" href=""></a>LinkedIn</li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <section class="container section">
-        <h1 class="section__title visually-hidden">Портфолио</h1>
-        <!-- Фильтр навигации -->
-        <ul id="filters" class="list filter">
-          <li><button data-type="all" class="btn filter__btn active" type="button">Все</button></li>
-          <li>
-            <button data-type="web" class="btn filter__btn" type="button">Веб-сайты</button>
-          </li>
-          <li>
-            <button data-type="application" class="btn filter__btn" type="button">
-              Приложения
-            </button>
-          </li>
-          <li><button data-type="design" class="btn filter__btn" type="button">Дизайн</button></li>
-          <li>
-            <button data-type="marketing" class="btn filter__btn" type="button">Маркетинг</button>
-          </li>
-        </ul>
-        <!-- Проекты портфолио -->
-        <ul id="projectList" class="list projects">
-          <li data-type="web" class="projects__element card">
+const projects = [
+  {
+    type: 'web',
+    html: `<li data-type="web" class="projects__element card">
             <a class="link projects__link" href=""
               ><div class="thumb">
                 <picture>
@@ -158,8 +49,11 @@
                 <p class="projects__type">Веб-сайт</p>
               </div></a
             >
-          </li>
-          <li data-type="design" class="projects__element card">
+          </li>`,
+  },
+  {
+    type: 'design',
+    html: `<li data-type="design" class="projects__element card">
             <a class="link projects__link" href=""
               ><div class="thumb">
                 <picture>
@@ -213,8 +107,11 @@
                 <p class="projects__type">Дизайн</p>
               </div></a
             >
-          </li>
-          <li data-type="application" class="projects__element card">
+          </li>`,
+  },
+  {
+    type: 'application',
+    html: `<li data-type="application" class="projects__element card">
             <a class="link projects__link" href=""
               ><div class="thumb">
                 <picture>
@@ -266,8 +163,11 @@
                 <p class="projects__type">Приложение</p>
               </div></a
             >
-          </li>
-          <li data-type="marketing" class="projects__element card">
+          </li>`,
+  },
+  {
+    type: 'marketing',
+    html: `<li data-type="marketing" class="projects__element card">
             <a class="link projects__link" href=""
               ><div class="thumb">
                 <picture>
@@ -319,8 +219,11 @@
                 <p class="projects__type">Маркетинг</p>
               </div></a
             >
-          </li>
-          <li data-type="application" class="projects__element card">
+          </li>`,
+  },
+  {
+    type: 'application',
+    html: `<li data-type="application" class="projects__element card">
             <a class="link projects__link" href=""
               ><div class="thumb">
                 <picture>
@@ -372,8 +275,11 @@
                 <p class="projects__type">Приложение</p>
               </div></a
             >
-          </li>
-          <li data-type="web" class="projects__element card">
+          </li>`,
+  },
+  {
+    type: 'web',
+    html: `<li data-type="web" class="projects__element card">
             <a class="link projects__link" href=""
               ><div class="thumb">
                 <picture>
@@ -425,8 +331,11 @@
                 <p class="projects__type">Веб-сайт</p>
               </div></a
             >
-          </li>
-          <li data-type="design" class="projects__element card">
+          </li>`,
+  },
+  {
+    type: 'design',
+    html: `<li data-type="design" class="projects__element card">
             <a class="link projects__link" href=""
               ><div class="thumb">
                 <picture>
@@ -478,8 +387,11 @@
                 <p class="projects__type">Дизайн</p>
               </div></a
             >
-          </li>
-          <li data-type="marketing" class="projects__element card">
+          </li>`,
+  },
+  {
+    type: 'marketing',
+    html: `<li data-type="marketing" class="projects__element card">
             <a class="link projects__link" href=""
               ><div class="thumb">
                 <picture>
@@ -531,8 +443,11 @@
                 <p class="projects__type">Маркетинг</p>
               </div></a
             >
-          </li>
-          <li data-type="application" class="projects__element card">
+          </li>`,
+  },
+  {
+    type: 'application',
+    html: ` <li data-type="application" class="projects__element card">
             <a class="link projects__link" href=""
               ><div class="thumb">
                 <picture>
@@ -584,86 +499,35 @@
                 <p class="projects__type">Приложение</p>
               </div></a
             >
-          </li>
-        </ul>
-      </section>
-    </main>
-    <footer>
-      <div class="container section-footer">
-        <!-- adress -->
-        <div class="tablet-section">
-          <div class="blok-adress">
-            <a class="link logo blok-adress__logo" href="./"
-              >Web<span class="blok-adress__text">Studio</span></a
-            >
-            <address>г. Харьков, ул. Сумская, 1</address>
-            <ul class="list blok-adress__list">
-              <li>
-                <a class="link blok-adress__contact" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
-              </li>
-              <li>
-                <a class="link blok-adress__contact" href="tel:+380961111111">+38 096 111 11 11</a>
-              </li>
-            </ul>
-          </div>
-          <!-- join -->
-          <div class="blok-join">
-            <b class="footer-title">присоединяйтесь</b>
-            <ul class="list blok-join__list">
-              <li>
-                <a class="link-social blok-join__link" href="" aria-label="instagram"
-                  ><svg class="icon-social" width="20" height="20">
-                    <use href="./images/icons.svg#instagram"></use></svg
-                ></a>
-              </li>
-              <li>
-                <a class="link-social blok-join__link" href="" aria-label="twitter"
-                  ><svg class="icon-social" width="20" height="20">
-                    <use href="./images/icons.svg#twitter"></use></svg
-                ></a>
-              </li>
-              <li>
-                <a class="link-social blok-join__link" href="" aria-label="facebook"
-                  ><svg class="icon-social" width="20" height="20">
-                    <use href="./images/icons.svg#facebook"></use></svg
-                ></a>
-              </li>
-              <li>
-                <a class="link-social blok-join__link" href="" aria-label="linkedin"
-                  ><svg class="icon-social" width="20" height="20">
-                    <use href="./images/icons.svg#linkedin"></use></svg
-                ></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Subscribe -->
-        <div class="blok-subscribe">
-          <b class="footer-title">Подпишитесь на рассылку</b>
+          </li>`,
+  },
+];
 
-          <form class="blok-subscribe__field">
-            <label for="email">
-              <input
-                class="blok-subscribe__mail"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="E-mail"
-              />
-            </label>
+const projectList = document.getElementById('projectList');
+const buttons = document.querySelectorAll('#filters button');
 
-            <button class="blok-subscribe__btn" type="submit">
-              Подписаться<svg class="blok-subscribe__ico" width="24" height="24">
-                <use href="./images/icons.svg#send"></use>
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </footer>
-    <script src="./js/mobile-menu.js"></script>
-    <script src="./js/filter-projects.js"></script>
-  </body>
-</html>
+// функция рендера
+function renderProjects(type = 'all') {
+  projectList.innerHTML = ''; // очищаем список
+
+  const filtered = type === 'all' ? projects : projects.filter(project => project.type === type);
+
+  filtered.forEach(project => {
+    projectList.insertAdjacentHTML('beforeend', project.html);
+  });
+}
+
+// обработка кликов по кнопкам
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    // сброс активных кнопок
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const type = button.dataset.type;
+    renderProjects(type);
+  });
+});
+
+// начальный рендер
+renderProjects();
